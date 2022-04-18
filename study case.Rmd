@@ -1,0 +1,162 @@
+---
+title: "Regression model: Insurance Study Case"
+author: "Team Algoritma"
+date: "`r format(Sys.Date(), '%B %e, %Y')`"
+output: 
+  html_document:
+    theme: united
+    higlight: zenburn
+    toc: true
+    toc_float:
+      collapsed: false
+    number_sections: true
+    df_print: paged
+---
+
+<style>
+body {
+text-align: justify}
+</style>
+
+# Libraries and Setup
+
+```{r, setup, echo=FALSE}
+# clear-up the environment
+rm(list = ls())
+
+# chunk options
+knitr::opts_chunk$set(
+  message = FALSE,
+  warning = FALSE,
+  fig.align = "center",
+  comment = "#>"
+)
+
+# scientific notation
+options(scipen = 9999)
+```
+
+```{r}
+library(dplyr)
+library(lubridate)
+```
+
+# Study Case
+
+Sebagai seorang karyawan pada perusahaan asuransi, Anda diminta untuk melakukan prediksi premi asuransi yang harus dibayarkan oleh seorang pelanggan yang akan melakukan pemilihan asuransi. 
+
+1. Silahkan import terlebih dahulu data `car.csv` 
+```{r}
+train <- read.csv("data_input/car.csv", stringsAsFactors = T)
+train
+```
+
+Deskripsi variabel: 
+
+Data Description:
+
+- `Car_Name`: Nama/model dari mobil
+- `Year`: Tahun produksi
+- `Selling_Price`: Harga jual
+- `Present_Price`: Harga beli saat ini
+- `Kms_Driven`: Jumlah kilometer yang sudah ditempuh
+- `Fuel_Type`: Jenis bahan bakar
+- `Seller_Type`: Jenis penjual
+- `Transmission`: Jenis transmisi
+- `Owner`: Status sebagai pemilik (1 = yes, 0 = no)
+
+- `age`: usia/umur
+- `sex`: gender (male or female)  
+- `bmi`: body mass index  
+- `children`: jumlah anak  
+- `smoker`: perokok/bukan
+- `region`: wilayah tempat tinggal  
+- `charges`: cost medical (dolar)  
+
+2. Lakukanlah Exploratory Data Analysis sebelum membuat pemodelan
+
+a. Periksalah struktur data `car`
+```{r}
+
+```
+
+b. Ubahlah tipe data yang belum sesuai
+```{r}
+
+```
+
+c. Periksalah apakah terdapat missing value pada dataset
+```{r}
+
+```
+
+d. Sebelum melakukan analisis regresi, periksalah korelasi antara variabel **target** yaitu `Selling_Price` dan **prediktor** 
+
+```{r}
+library(GGally)
+
+```
+
+Berdasarkan output korelasi diatas, variabel prediktor apakah yang memiliki korelasi terkecil?  
+
+Asumsi awal apa yang bisa Anda berikan terkait korelasi tersebut? 
+
+
+3. Buatlah sebuah model 
+
+a. Menggunakan stepwise regression dengan direction backward untuk mengetahui variabel apa saja yang signifikan berpengaruh terhadap `Selling_Price`
+
+
+```{r}
+
+```
+
+
+b. Menggunakan variabel prediktor berdasarkan business wise dan nilai korelasi yang kuat
+```{r}
+
+```
+
+4. Periksalah summary dari model yang telah Anda buat (pilih salah satu model)
+```{r}
+
+```
+
+Berikanlah interpretasi terhadap output summary di atas:
+
+
+Berdasarkan kedua model diperoleh, apabila dilihat dari nilai adjusted R-Squared-nya, manakah model yang lebih baik?
+```{r}
+
+```
+
+5. Berdasarkan model linear regression yang sudah dibuat, prediksilah data `train` dan data test yang ada menggunakan dua model yang telah dibuat
+
+a. Import data `car_test.csv` dan lakukan data wrangling seperti yang dilakukan pada data train
+
+```{r}
+test <- read.csv("data_input/car_test.csv", stringsAsFactors = T)
+test
+```
+b. Prediksi data test menggunakan model yang telah dibuat
+
+```{r}
+
+```
+
+6. Periksa error (MAPE) terhadap data train dan test
+
+```{r}
+library(MLmetrics)
+
+```
+
+
+b. Periksalah errornya
+```{r}
+library(MLmetrics)
+
+```
+
+# Kesimpulan
+

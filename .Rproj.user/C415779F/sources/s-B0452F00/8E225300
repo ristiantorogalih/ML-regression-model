@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1578481237583.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "8E225300",
+    "lastKnownWriteTime" : 1578481435,
+    "last_content_update" : 1578481435854,
+    "path" : "~/Downloads/RM/regression.Rmd",
+    "project_path" : "regression.Rmd",
+    "properties" : {
+        "cursorPosition" : "743,0",
+        "docOutlineVisible" : "1",
+        "scrollLine" : "731"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

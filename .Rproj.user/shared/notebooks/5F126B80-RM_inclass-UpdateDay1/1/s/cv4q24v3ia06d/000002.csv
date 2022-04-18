@@ -1,0 +1,6 @@
+"0","ggplot(small_diamond, aes(x = carat, y = price))+"
+"0","  geom_point(alpha = 0.5)+"
+"0","  geom_abline(intercept = model_diamond$coefficients[1], slope = model_diamond$coefficients[2], col = ""blue"")+"
+"0","  geom_abline(intercept = model_diamond_no$coefficients[1], slope = model_diamond_no$coefficients[2], col = ""red"")+"
+"0","  theme_minimal()"
+"0",""

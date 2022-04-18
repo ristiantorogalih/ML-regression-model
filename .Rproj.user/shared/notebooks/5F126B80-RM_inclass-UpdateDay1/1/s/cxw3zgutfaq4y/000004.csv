@@ -1,0 +1,2 @@
+"0","# Visualization"
+"0","plot(x = small_diamond$carat, y = small_diamond$price)"

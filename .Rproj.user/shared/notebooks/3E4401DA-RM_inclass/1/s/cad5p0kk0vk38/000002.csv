@@ -1,0 +1,8 @@
+"0","# Membuat slope dan intercept secara random"
+"0","set.seed(123)"
+"0","df_random <- data.frame(intercept = model_diamond$coefficients[""(Intercept)""] * runif(100, max = 2),"
+"0","                        slope = model_diamond$coefficients[""carat""] * runif(100, max = 2)"
+"0","                        )"
+"2","Error in data.frame(intercept = model_diamond$coefficients[""(Intercept)""] *  : 
+  object 'model_diamond' not found
+"

@@ -1,0 +1,8 @@
+"0","df_agg %>% "
+"0","  ggplot(aes(x = region, y = sex, fill = charges )) +"
+"0","  geom_tile() +"
+"0","  scale_fill_gradient(low = ""firebrick"", high = ""lightyellow"") +"
+"0","  theme_minimal()"
+"2","Error in ggplot(., aes(x = region, y = sex, fill = charges)) : 
+  object 'df_agg' not found
+"

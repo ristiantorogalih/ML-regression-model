@@ -1,0 +1,21 @@
+"0","model_ols <- lm(price~1, small_diamond) # membuat model price tanpa menggunakan prediktor"
+"0","model_ols"
+"1","
+Call:
+"
+"1",""
+"1","lm(formula = price ~ 1, data = small_diamond)"
+"1",""
+"1","
+
+"
+"1","Coefficients:
+"
+"1","(Intercept)  "
+"1","
+"
+"1","       4164  "
+"1","
+"
+"1","
+"
